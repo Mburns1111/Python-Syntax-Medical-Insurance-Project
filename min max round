@@ -1,0 +1,12 @@
+tshirt_price = 9.75
+shorts_price = 15.50
+mug_price = 5.99
+poster_price = 2.00
+
+
+# Write your code below:
+max_price = max(tshirt_price, shorts_price, mug_price, poster_price)
+min_price = min(tshirt_price, shorts_price, mug_price, poster_price)
+# round() first is the number or argument you want ot round, and then the next one is the nearest decimal point. 0 is a whole number, 1 is to the .1
+rounded_price = round(tshirt_price, 1)
+print(rounded_price)
