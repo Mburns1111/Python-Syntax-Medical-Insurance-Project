@@ -1,0 +1,27 @@
+current_budget = 3500.75
+
+def print_remaining_budget(budget):
+  print("Your remaining budget is: $" + str(budget))
+
+print_remaining_budget(current_budget)
+
+# Write your code below: 
+# returns work like print, and recall information. like storage.
+# in the one below the deduct pulls the budget and the expense into the function and 
+#tells it so take the budget from above and the expense.
+
+def deduct_expense(budget, expense):
+  return(budget - expense)
+shirt_expense = 9
+# the new budget after taking out the shirt expense is next. It runs the function deduct_expense that follows below
+# it tells the deduct expense the two parameters to run, the first one the new current budget from above, and the cost of the shirt.
+# the deduct expense definition runs those two and returns the total to the right of the = on the new budget after shirt parameter. 
+# so the new budget now equals the current budget minus the shirt expense.
+new_budget_after_shirt = deduct_expense(current_budget, shirt_expense )
+
+def deduct_expense(budget, expense):
+  return(budget - expense)
+# last we print the total. it calls the function at the top that originally printed the current budget, and then tells 
+# it the new budget to pass as the number in the function. 
+print_remaining_budget(new_budget_after_shirt)
+
