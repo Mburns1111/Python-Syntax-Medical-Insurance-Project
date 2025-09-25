@@ -1,0 +1,22 @@
+#trip_planner_welcome is being called as a function, not a variable, and has been and adding my name into the function tells the function to pass it in the space of the name argument.
+def trip_planner_welcome(name): 
+  print("Welcome to tripplanner v1.0 " + name)
+  
+trip_planner_welcome("Melody")
+
+#define a function called estimated_time_rounded() that will allow us to calculate a rounded time value based on a decimal for our user’s trip.
+def estimated_time_rounded(estimated_time):
+  rounded_time = round(estimated_time)
+  return rounded_time
+#After the function definition, call estimated_time_rounded() with a decimal argument and save the result to a variable called estimate. Since this amount represents a time, be sure to use a positive number.
+estimate = estimated_time_rounded(2.5)
+
+#Create a function called destination_setup(<parameters>) that will have four parameters in this exact order: origin, destination estimated_time mode_of_transport
+#Give the parameter mode_of_transport a default value of "Car" default values can be listed directly into the parameter.
+def destination_setup(origin, destination, estimated_time, mode_of_transport="Car"):
+  print("Your trip starts off in " + origin )   
+  print("And you are traveling to " + destination )
+  print("You will be traveling by " + mode_of_transport )
+  print("It will take approximately " + str(estimated_time) + " hours.")
+#After the function definition, call destination_setup() with arguments
+destination_setup("Greensboro", "Grandma's", estimate, "Car")
