@@ -1,0 +1,21 @@
+
+def top_tourist_locations_italy():
+  #this is value 1
+  first = "Rome"
+  #this is value 2
+  second = "Venice"
+  #this is value 3
+  third = "Florence"
+  #below it sends the value in the 1st, 2nd, and 3rd place
+  return first, second, third
+  #below it assigns a new name to the three 
+  #values in the above function. This is good for 
+  #when you want to print different things in 
+  #different places, or to call on them 
+  # independently. First, we say it's three things, 
+  #and the link the function, and so the three #places in the function are now recalled with a new name. 
+most_popular1, most_popular2, most_popular3 = top_tourist_locations_italy()
+
+print(most_popular1)
+print(most_popular2)
+print(most_popular3)
