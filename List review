@@ -1,0 +1,39 @@
+#Maria is entering customer data for her web store business. We’re going to help her organize her data. Start by turning this list of customer first names into a list 
+first_names = [
+"Ainsley",
+"Ben",
+"Chani",
+"Depak",
+]
+#Maria wants to track all customer’s preferred sizes for her clothing. Create a list called preferred_size.
+preferred_size = ["Small", "Large", "Medium"]
+#Oh no! We forgot to add Depak’s size. Depak’s size is "Medium". Use .append() to add "Medium" to the preferred_size list.
+preferred_size.append("Medium")
+print(preferred_size)
+
+#Create a two-dimensional list called customer_data
+customer_data=[["Ainsley", "Small", True],
+["Ben", "Large", False],
+["Chani", "Medium", True],
+["Depak", "Medium", False]]
+print(customer_data )
+#"Chani" reached out to Maria. She requested to switch to regular shipping to save some money.
+customer_data[2][2]= False
+print(customer_data)
+#"Ben" reached out to Maria asking to remove his shipping option (the True or False value) because he is unsure what type he wants.
+customer_data[1].remove(False)
+#Great job making it this far! One last thing, Maria received new customers, "Amit" and "Karim", the following 2d list contains their data:
+#[["Amit", "Large", True], ["Karim", "X-Large", False]]
+#Create a new variable customer_data_final. Combine our existing list customer_data with our new customer 2d list using + by adding it to the end of customer_data.
+#Print customer_data_final to see our final result.
+customer_data_final= customer_data+ [["Amit", "Large", True], ["Karim", "X-Large", False]]
+
+print(customer_data_final)
+
+
+
+
+
+
+
+
