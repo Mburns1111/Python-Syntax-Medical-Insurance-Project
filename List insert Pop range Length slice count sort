@@ -1,0 +1,215 @@
+#The Python list method .insert() allows us to add an element to a specific index in a list method takes in two inputs:
+#The index you want to insert into. [1][2[3]
+#The element you want to insert at the specified index."Chocolate"
+front_display_list = ["Mango", "Filet Mignon", "Chocolate Milk"]
+print(front_display_list)
+
+# Your code below: 
+front_display_list.insert(0,"Pineapple") 
+print(front_display_list)
+
+#The .pop() method takes an optional single input:
+#The index for the element you want to remove.
+#Using .pop() without an index will remove whatever the last element of the list is.
+#removed_element = cs_topics.pop()
+#print(cs_topics)
+#print(removed_element)
+#['Python', 'Data Structures', 'Balloon Making', 'Algorithms']
+#'Clowns 101'
+#.pop() is unique in that it will return the value that was removed. If we wanted to know what element was deleted, simply assign a variable to the call of the .pop() method. In this case, we assigned it to removed_element.
+
+
+data_science_topics = ["Machine Learning", "SQL", "Pandas", "Algorithms", "Statistics", "Python 3"]
+print(data_science_topics)
+
+# Your code below: 
+
+data_science_topics.pop()
+print(data_science_topics)
+data_science_topics.pop(3)
+print(data_science_topics)
+
+#The function range() takes a single input, and generates numbers starting at 0 and ending at the number before the input. 
+#The range() function is unique in that it creates a range object. It is not a typical list like the ones we have been working with.
+#In order to use this object as a list, we have to first convert it using another built-in function called list()
+#The list() function takes in a single input for the object you want to convert.
+#my_range = range(10)
+#print(my_range)
+#print(list(my_range))
+
+# Your code below: 
+
+number_list = range(9)
+print(list(number_list))
+
+zero_to_seven  = range(8)
+print(list(zero_to_seven ))
+
+#By default, range() creates a list starting at 0. However, if we call range() with two inputs, we can create a list that starts at a different number.
+#For example, range(2, 9) would generate numbers starting at 2 and ending at 8 (just before 9):
+#If we use a third input, we can create a list that “skips” numbers.
+
+#For example, range(2, 9, 2) will give us a list where each number is 2 greater than the previous number:
+#my_range2 = range(2, 9, 2)
+#print(list(my_range2))
+#[2, 4, 6, 8]
+#my_range3 = range(1, 100, 10)
+#print(list(my_range3))
+#[1, 11, 21, 31, 41, 51, 61, 71, 81, 91]
+
+# Your code below: 
+
+range_five_three = range(5, 15, 3)
+
+range_diff_five  = range(0, 40, 5)
+
+##We can do this using a built-in function called len() When we apply len() to a list, we get the number of elements in that list:
+#my_list = [1, 2, 3, 4, 5]
+#print(len(my_list))
+#5
+
+long_list = [1, 5, 6, 7, -23, 69.5, True, "very", "long", "list", "that", "keeps", "going.", "Let's", "practice", "getting", "the", "length"]
+
+big_range = range(2, 3000, 100)
+
+# Your code below: 
+long_list_len = print(len(long_list)) 
+
+big_range_length = len(big_range)
+print(big_range_length)
+
+#In Python, often we want to extract only a portion of a list. Dividing a list in such a manner is referred to as slicing.
+
+#We can do this using the following syntax: letters[start:end], where:
+#letters = ["a", "b", "c", "d", "e", "f", "g"]
+
+#start is the index of the first element that we want to include in our selection. In this case, we want to start at "b", which has index 1.
+#end is the index of one more than the last index that we want to include. The last element we want is "f", which has index 5, so end needs to be 6.
+#sliced_list = letters[1:6]
+#print(sliced_list)
+#["b", "c", "d", "e", "f"]
+
+
+suitcase = ["shirt", "shirt", "pants", "pants", "pajamas", "books"]
+
+beginning = suitcase[0:2]
+
+# Your code below: 
+print(beginning) 
+
+middle =  suitcase[2:4]
+print(middle) 
+
+
+#Output:
+#['shirt', 'shirt']
+#['pants', 'pants']
+
+
+#fruits = ["apple", "cherry", "pineapple", "orange", "mango"]
+#If we want to select the first n elements of a list, we could use the following code:
+#fruits[:n]
+#The following code would start slicing from index 0 and up to index 3. Note that the fruit at index 3 (orange) is not included in the results.
+#print(fruits[:3])
+#['apple', 'cherry', 'pineapple']
+#We can do something similar when we want to slice the last n elements in a list:
+#fruits[-n:]
+#For our fruits list, suppose we wanted to slice the last two elements.
+
+#This code slices from the element at index -2 up through the last index.
+#print(fruits[-2:])
+#['orange', 'mango']
+#or our fruits example, suppose we wanted to slice all but the last element from the list.
+#This example starts counting from the 0 index up to the element at index -1.
+#print(fruits[:-1])
+#['apple', 'cherry', 'pineapple', 'orange']
+
+
+
+suitcase = ["shirt", "shirt", "pants", "pants", "pajamas", "books"]
+
+# Your code below: 
+last_two_elements =  suitcase[-2:]
+print(last_two_elements )
+slice_off_last_three  =  suitcase[:-3]
+print(slice_off_last_three )
+
+#In Python, it is common to want to count occurrences of an item in a list.
+
+#Suppose we have a list called letters that represents the letters in the word “Mississippi”:
+#letters = ["m", "i", "s", "s", "i", "s", "s", "i", "p", "p", "i"]
+#If we want to know how many times i appears in this word, we can use the list method called 
+#.count()
+#num_i = letters.count("i")
+#print(num_i)
+#4
+#Notice that since .count() returns a value, we can assign it to a variable to use it.
+#We can even use .count() to count element appearances in a two-dimensional list.
+
+#Let’s use the list number_collection as an example:
+#number_collection = [[100, 200], [100, 200], [475, 29], [34, 34]]
+#If we wanted to know how often the sublist [100, 200] appears:
+#num_pairs = number_collection.count([100, 200])
+#print(num_pairs)
+#2
+
+votes = ["Jake", "Jake", "Laurie", "Laurie", "Laurie", "Jake", "Jake", "Jake", "Laurie", "Cassie", "Cassie", "Jake", "Jake", "Cassie", "Laurie", "Cassie", "Jake", "Jake", "Cassie", "Laurie"]
+
+# Your code below: 
+jake_votes = votes.count("Jake")
+print(jake_votes)
+
+#Often, we will want to sort a list in either numerical (1, 2, 3, …) or alphabetical (a, b, c, …) order.
+
+#We can sort a list using the method 
+#.sort()
+#Suppose that we have a list of names:
+#names = ["Xander", "Buffy", "Angel", "Willow", "Giles"]
+#names.sort()
+#print(names)
+#['Angel', 'Buffy', 'Giles', 'Willow', 'Xander']
+#As we can see, the .sort() method sorted our list of names in alphabetical order.
+
+#.sort() also provides us the option to go in reverse. Instead of sorting in ascending order like we just saw, we can do so in descending order.
+#names.sort(reverse=True)
+#print(names)
+#['Xander', 'Willow', 'Giles', 'Buffy', 'Angel']
+#Note: The .sort() method does not return
+#any value and thus does not need to be assigned to a variable since it modifies the list directly. If we do assign the result of the method, it would assign the value of None to the variable.
+
+# Checkpoint 1 & 2
+addresses = ["221 B Baker St.", "42 Wallaby Way", "12 Grimmauld Place", "742 Evergreen Terrace", "1600 Pennsylvania Ave", "10 Downing St."]
+addresses.sort()
+print(addresses)
+
+
+# Checkpoint 3
+names = ["Ron", "Hermione", "Harry", "Albus", "Sirius"]
+names.sort()
+
+
+# Checkpoint 4 & 5
+cities = ["London", "Paris", "Rome", "Los Angeles", "New York"]
+sorted_cities = cities.sort(reverse=True)
+print(sorted_cities)
+
+#A second way of sorting a list in Python is to use the built-in function sorted().
+#It comes before a list, instead of after as all built-in functions
+#It generates a new list rather than modifying the one that already exists.
+#names = ["Xander", "Buffy", "Angel", "Willow", "Giles"]
+#sorted_names = sorted(names)
+#print(sorted_names)
+#['Angel', 'Buffy', 'Giles', 'Willow', 'Xander']
+#print(names)
+#['Xander', 'Buffy', 'Angel', 'Willow', 'Giles']
+
+games = ["Portal", "Minecraft", "Pacman", "Tetris", "The Sims", "Pokemon"]
+
+# Your code below:
+games_sorted = sorted(games)
+print(games_sorted)
+print(games)
+
+
+
+
