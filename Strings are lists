@@ -1,0 +1,61 @@
+They're all Lists!
+2 min
+A string can be thought of as a 
+list
+Preview: Docs Loading link description
+ of characters.
+
+Like any other list, each character in a string has an index. Consider the string:
+
+favorite_fruit = "blueberry"
+
+Copy to Clipboard
+
+We can select specific letters from this string using the index. Let’s look at the first letter of the string.
+
+print(favorite_fruit[1])
+# Output: l
+
+Copy to Clipboard
+
+Whoops, is that the first letter you expected? Notice that the letter at index 1 of "blueberry" isn’t b, it’s l. This is because the indices of a string start at 0. b is located at the zero index and we could select it using:
+
+print(favorite_fruit[0])
+# Output: b
+
+Copy to Clipboard
+
+It’s important to note that indices of 
+strings
+Preview: Docs Loading link description
+ must be integers. If we were to 
+try
+Preview: Docs Loading link description
+ to select a non-integer index we would get a TypeError.
+
+For example:
+
+print(favorite_fruit[1.5])
+
+Copy to Clipboard
+
+This would result in:
+
+Traceback (most recent call last):
+  File "script.py", line 3, in <module>
+    print(favorite_fruit[1.5])
+TypeError: string indices must be integers
+Instructions
+Checkpoint 1 Passed
+1.
+One of the most common things that are represented by strings is names.
+
+Save your name as a string to the variable my_name.
+
+Checkpoint 2 Passed
+2.
+Select the first letter of the variable my_name and save it to first_initial.
+
+my_name="my name"
+first_initial=my_name[0]
+
