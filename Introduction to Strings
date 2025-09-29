@@ -1,0 +1,2 @@
+favorite_word = "word"
+print(favorite_word)
