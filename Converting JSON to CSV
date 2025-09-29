@@ -1,0 +1,16 @@
+import requests
+import csv
+
+r = requests.get('https://api.census.gov/data/2020/acs/acs5?get=NAME,B08303_001E,B08303_013E&for=county:*&in=state:36')
+#use .json method to accsess the decoded json file
+r_json = r.json()
+#first make a variable and call it file. 
+#then we use open() to open the file. 
+#open with mode='w' for writing mode
+#newline='' ensures that new lines are always read correctly.
+#next use writer( function from the csv library)
+#last we use writerows method to put each line
+#in a comma seperated format.
+with open('commute_data.csv', mode='w', newline= '') as file:
+  writer=csv.writer(file)
+  writer.writerows(r.json())
