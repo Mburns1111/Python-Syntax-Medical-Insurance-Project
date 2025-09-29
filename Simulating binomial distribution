@@ -1,0 +1,8 @@
+
+import numpy
+#a single (1) coin toss
+#using a biased coin that has a 0.8 probability of landing on heads. We’ll call heads successful.
+#conducted 500 times.
+print(numpy.random.binomial(n=1, p=0.8, size=500))
+
+print(numpy.random.binomial(n=100, p=0.8, size=500))
