@@ -1,0 +1,7 @@
+import pandas
+commute_df=pandas.read_csv("commute_data.csv")
+# Preview DataFrame
+print(commute_df.head())
+ 
+# Rename DataFrame columns
+commute_df.columns = ['name', 'total_commuters', 'state', 'column4', 'column5']
