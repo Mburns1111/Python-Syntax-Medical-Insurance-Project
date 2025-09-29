@@ -8,3 +8,13 @@ def account_generator(first_name, last_name):
 new_account = account_generator(first_name, last_name)
 
 print(new_account)
+
+
+first_name = "Bob"
+last_name = "Daily"
+Instructions
+Checkpoint 1 Passed
+
+# concatenate the string "R" with a slice of first_name that includes everything but the first character, "B", and save it to a new string fixed_first_name.
+fixed_first_name= "R"+first_name[1:]
+print(fixed_first_name)
