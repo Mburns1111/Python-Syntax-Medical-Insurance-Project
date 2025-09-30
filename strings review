@@ -1,0 +1,46 @@
+highlighted_poems = "Afterimages:Audre Lorde:1997,  The Shadow:William Carlos Williams:1915, Ecstasy:Gabriela Mistral:1925,   Georgia Dusk:Jean Toomer:1923,   Parting Before Daybreak:An Qi:2014, The Untold Want:Walt Whitman:1871, Mr. Grumpledump's Song:Shel Silverstein:2004, Angel Sound Mexico City:Carmen Boullosa:2013, In Love:Kamala Suraiyya:1965, Dream Variations:Langston Hughes:1994, Dreamwood:Adrienne Rich:1987"
+#print(highlighted_poems)
+#Start by splitting highlighted_poems at the commas and saving it to highlighted_poems_list.
+
+highlighted_poems_list=highlighted_poems.split(",")
+#print(highlighted_poems_list)
+#Start by creating a new empty list, highlighted_poems_stripped.
+
+#Then, iterate through highlighted_poems_list using a for loop and for each poem strip away the whitespace and append it to your new list, highlighted_poems_stripped.
+highlighted_poems_stripped = []
+
+for poem in highlighted_poems_list:
+  highlighted_poems_stripped.append(poem.strip())
+
+#print(highlighted_poems_stripped)
+
+highlighted_poems_details=[]
+#Iterate through highlighted_poems_stripped and split each string around the : characters and append the new lists into highlighted_poems_details.
+for poem in highlighted_poems_stripped:
+  highlighted_poems_details.append(poem.split(":"))
+print(highlighted_poems_details)
+
+titles=[]
+poets=[]
+dates=[]
+#To get each part, use indexing (like [0], [1], [2]) for title, poet, and date. This way, you get the full string for each section, not just a single character or integer. Splitting again is not needed because the data is already separated for you.
+for title in highlighted_poems_details:
+  titles.append(title[0])
+for poet in highlighted_poems_details:
+  poets.append(poet[1])
+for date in highlighted_poems_details:
+  dates.append(date[2])
+
+
+#Finally, write a for loop that uses .format() to print out the following string for each poem:
+# Loop through each index from 0 up to the length of highlighted_poems_details
+# This ensures you visit every poem in your lists
+for i in range(0, len(highlighted_poems_details)):
+    # For each index i, get the title from titles[i], the poet from poets[i], and the date from dates[i]
+    # Use .format() to insert these values into the string in the correct order
+    # Print the formatted string for the current poem
+    print('The poem {} was published by {} in {}'.format(titles[i], poets[i], dates[i]))
+
+
+
+
